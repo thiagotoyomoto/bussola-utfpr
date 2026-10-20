@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Conheça a Bússola, um espaço de busca de orientação para estudantes."
+    >
+    <title>Bússola | Quem somos</title>
+    <link rel="icon" type="image/png" href="bussola.png">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="home-page">
+    <header class="site-header">
+      <a class="brand" href="#inicio" aria-label="Bússola — página inicial">
+        <img class="brand__logo" src="bussola.png" alt="Logotipo da Bússola">
+        <span>Bússola</span>
+      </a>
+
+      <nav class="header-actions" aria-label="Navegação principal">
+        <button class="icon-button" type="button" aria-label="Pesquisar">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <circle cx="10.8" cy="10.8" r="7.2"></circle>
+            <path d="m16.2 16.2 5 5"></path>
+          </svg>
+        </button>
+        <a class="icon-button" href="#sobre" aria-label="Ajuda e informações">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M9.6 9a2.5 2.5 0 1 1 4.4 1.6c-1.1 1.2-2 1.5-2 3"></path>
+            <path d="M12 17.5h.01"></path>
+          </svg>
+        </a>
+        <button
+          class="icon-button icon-button--profile"
+          type="button"
+          aria-label="Acessar perfil"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <circle cx="12" cy="8" r="4"></circle>
+            <path d="M3 21c.8-4.2 4.2-6.5 9-6.5s8.2 2.3 9 6.5"></path>
+          </svg>
+        </button>
+      </nav>
+    </header>
+
+    <main id="inicio">
+      <section class="about" id="sobre" aria-labelledby="about-title">
+        <h1 class="about__heading" id="about-title">
+          <img class="about__logo" src="bussola.png" alt="">
+          <span>Quem somos?</span>
+        </h1>
+        <p class="about__description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <div class="about__actions">
+          <button class="button button--primary" type="button">Consultar Bússola</button>
+          <button class="button" type="button">Entrar</button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Bússola · Busca sobre orientação baseada no Lattes</p>
+    </footer>
+  </body>
+</html>
