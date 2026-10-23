@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Explore docentes e áreas de pesquisa públicas na Bússola."
+    >
+    <title>Bússola | Busca pública</title>
+    <link rel="icon" type="image/png" href="bussola.png">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="home-page public-search-page">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Bússola — página inicial">
+        <img class="brand__logo" src="bussola.png" alt="Logotipo da Bússola">
+        <span>Bússola</span>
+      </a>
+
+      <nav class="header-actions" aria-label="Navegação principal">
+        <a class="public-login" href="index.html" aria-label="Entrar na Bússola">Entrar</a>
+        <a class="icon-button" href="index.html#sobre" aria-label="Ajuda e informações">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M9.6 9a2.5 2.5 0 1 1 4.4 1.6c-1.1 1.2-2 1.5-2 3"></path>
+            <path d="M12 17.5h.01"></path>
+          </svg>
+        </a>
+      </nav>
+    </header>
+
+    <main id="inicio" class="public-search">
+      <header class="public-search__intro">
+        <div class="public-search__intro-copy">
+          <span class="visitor-badge">Acesso visitante</span>
+          <span class="demo-caption">dados demonstrativos · acesso limitado</span>
+          <h2 id="public-search-title">Explorar docentes e áreas de pesquisa</h2>
+          <p>
+            Visualize relações entre docentes e áreas de pesquisa públicas. Use busca convencional e filtros multicritério para encontrar perfis demonstrativos sem precisar de autenticação.
+          </p>
+        </div>
+        <aside class="access-note" aria-label="Limites do acesso público">
+          <h3>Acesso limitado</h3>
+          <p>Acesso público a docentes e áreas de pesquisa. Outros recursos exigem autenticação.</p>
+        </aside>
+      </header>
+
+      <div class="public-search__layout" aria-labelledby="public-search-title">
+        <aside class="public-search__sidebar" aria-label="Busca e resultados públicos">
+          <section class="public-panel search-panel" aria-labelledby="search-panel-title">
+            <h3 id="search-panel-title">Buscar docentes</h3>
+            <p class="panel-description">
+              Pesquise por nome ou palavra-chave. Combine filtros para refinar os resultados públicos.
+            </p>
+            <form class="public-search-form" role="search" action="busca-publica.html" method="get">
+              <label class="visually-hidden" for="public-query">Nome ou palavra-chave</label>
+              <span class="search-field">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <circle cx="10.8" cy="10.8" r="7.2"></circle>
+                  <path d="m16.2 16.2 5 5"></path>
+                </svg>
+                <input
+                  id="public-query"
+                  name="q"
+                  type="search"
+                  placeholder="Ex: Ana Beatriz ou Metodologia"
+                >
+              </span>
+
+              <fieldset class="filter-group">
+                <legend>Filtros</legend>
+                <div class="filter-row">
+                  <span class="filter-label">Titulação</span>
+                  <div class="filter-options" role="group" aria-label="Filtrar por titulação">
+                    <button class="filter-chip" type="button" aria-pressed="true">Mestrado</button>
+                    <button class="filter-chip" type="button" aria-pressed="false">Doutorado</button>
+                  </div>
+                </div>
+                <div class="filter-row">
+                  <span class="filter-label">Idioma</span>
+                  <div class="filter-options" role="group" aria-label="Filtrar por idioma">
+                    <button class="filter-chip" type="button" aria-pressed="true">Inglês</button>
+                  </div>
+                </div>
+                <div class="filter-row">
+                  <span class="filter-label">Área de pesquisa</span>
+                  <div class="filter-options" role="group" aria-label="Filtrar por área de pesquisa">
+                    <button class="filter-chip" type="button" aria-pressed="true">Todas as áreas</button>
+                  </div>
+                </div>
+              </fieldset>
+              <button class="clear-filters" type="reset">Limpar filtros</button>
+              <button class="public-button public-button--primary search-submit" type="submit">
+                Buscar docentes
+              </button>
+            </form>
+          </section>
+
+          <section class="public-panel results-panel" aria-labelledby="results-title">
+            <div class="results-heading">
+              <h3 id="results-title">Resultados públicos</h3>
+              <span class="result-count">3 demonstrativos</span>
+            </div>
+            <ul class="public-results">
+              <li>
+                <button class="result-person result-person--selected" type="button" aria-pressed="true">
+                  <span class="person-avatar person-avatar--lilac" aria-hidden="true">AB</span>
+                  <span><strong>Ana Beatriz</strong><small>Metodologia de Pesquisa</small></span>
+                </button>
+              </li>
+              <li>
+                <button class="result-person" type="button" aria-pressed="false">
+                  <span class="person-avatar person-avatar--blue" aria-hidden="true">MS</span>
+                  <span><strong>Marcos Silva</strong><small>Inteligência Artificial</small></span>
+                </button>
+              </li>
+              <li>
+                <button class="result-person" type="button" aria-pressed="false">
+                  <span class="person-avatar person-avatar--cream" aria-hidden="true">SM</span>
+                  <span><strong>Sofia Martins</strong><small>Design de Experiência</small></span>
+                </button>
+              </li>
+            </ul>
+          </section>
+        </aside>
+
+        <div class="public-search__center">
+          <section class="public-panel relations-panel" aria-labelledby="relations-title">
+            <div class="relations-heading">
+              <div>
+                <h3 id="relations-title">Relações docentes-áreas</h3>
+                <p>Grafo público de docentes e áreas de pesquisa demonstrativas</p>
+              </div>
+              <div class="view-switch" role="group" aria-label="Modo de visualização">
+                <button type="button" aria-pressed="true">Grafo</button>
+                <button type="button" aria-pressed="false">Lista</button>
+              </div>
+            </div>
+
+            <form class="graph-search" role="search" action="busca-publica.html" method="get">
+              <label class="visually-hidden" for="graph-query">Pesquisar no grafo</label>
+              <span class="search-field">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <circle cx="10.8" cy="10.8" r="7.2"></circle>
+                  <path d="m16.2 16.2 5 5"></path>
+                </svg>
+                <input id="graph-query" name="grafo" type="search" value="Metodologia de Pesquisa">
+              </span>
+              <button class="public-button filter-button" type="button" aria-label="Abrir filtros avançados">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M4 6h16M7 12h10m-7 6h4"></path>
+                  <circle cx="8" cy="6" r="1.5"></circle>
+                  <circle cx="15" cy="12" r="1.5"></circle>
+                  <circle cx="12" cy="18" r="1.5"></circle>
+                </svg>
+                Filtros
+              </button>
+            </form>
+
+            <div class="graph-summary">
+              <span class="related-toggle">Incluir áreas relacionadas</span>
+              <span>2 docentes · 2 áreas no grafo</span>
+            </div>
+
+            <figure class="relationship-graph" aria-labelledby="graph-caption">
+              <figcaption id="graph-caption" class="visually-hidden">
+                Grafo das relações acadêmicas: Ana Beatriz atua em Metodologia de Pesquisa e Marcos Silva atua em Inteligência Artificial.
+              </figcaption>
+              <div class="graph-columns" aria-hidden="true">
+                <span>DOCENTES</span><span>ÁREAS</span>
+              </div>
+              <svg class="graph-lines" viewBox="0 0 700 210" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+                <line x1="205" y1="74" x2="302" y2="74"></line>
+                <line x1="205" y1="174" x2="302" y2="174"></line>
+              </svg>
+              <div class="graph-node graph-node--teacher graph-node--selected">
+                <svg class="node-symbol node-symbol--person" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <circle cx="12" cy="6" r="3"></circle>
+                  <path d="M5 21v-3a7 7 0 0 1 14 0v3M12 13v8"></path>
+                </svg>
+                <span><small>DOCENTE · SELECIONADA</small><strong>Ana Beatriz</strong></span>
+              </div>
+              <div class="graph-node graph-node--area graph-node--selected-area">
+                <span class="node-symbol" aria-hidden="true">◇</span>
+                <span><small>ÁREA</small><strong>Metodologia de Pesquisa</strong></span>
+              </div>
+              <div class="graph-node graph-node--teacher graph-node--second">
+                <svg class="node-symbol node-symbol--person" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <circle cx="12" cy="6" r="3"></circle>
+                  <path d="M5 21v-3a7 7 0 0 1 14 0v3M12 13v8"></path>
+                </svg>
+                <span><small>DOCENTE</small><strong>Marcos Silva</strong></span>
+              </div>
+              <div class="graph-node graph-node--area graph-node--second-area">
+                <span class="node-symbol" aria-hidden="true">◇</span>
+                <span><small>ÁREA</small><strong>Inteligência Artificial</strong></span>
+              </div>
+            </figure>
+
+            <div class="graph-legend" aria-label="Legenda do grafo">
+              <span>
+                <svg class="legend-person" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <circle cx="12" cy="6" r="3"></circle>
+                  <path d="M5 21v-3a7 7 0 0 1 14 0v3M12 13v8"></path>
+                </svg>
+                Docente
+              </span>
+              <span><span class="legend-area" aria-hidden="true">◇</span> Área</span>
+              <span>Linha contínua = relação acadêmica</span>
+              <div class="graph-controls" role="group" aria-label="Controles de zoom do grafo">
+                <button type="button" aria-label="Diminuir zoom">−</button>
+                <span aria-live="polite">100%</span>
+                <button type="button" aria-label="Aumentar zoom">+</button>
+                <button type="button" aria-label="Expandir grafo">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </section>
+
+          <section class="public-panel list-alternative" aria-labelledby="list-alternative-title">
+            <div class="results-heading">
+              <h3 id="list-alternative-title">Alternativa em lista</h3>
+              <span class="result-count">Leitura das relações</span>
+            </div>
+            <ul class="relation-list">
+              <li><strong>Ana Beatriz</strong><span>Metodologia de Pesquisa</span></li>
+              <li><strong>Marcos Silva</strong><span>Inteligência Artificial</span></li>
+              <li><strong>Sofia Martins</strong><span>Design de Experiência</span></li>
+            </ul>
+          </section>
+        </div>
+
+        <aside class="public-panel profile-panel" aria-labelledby="profile-title">
+          <span class="profile-status">Não selecionado</span>
+          <div class="profile-person">
+            <span class="person-avatar person-avatar--large person-avatar--lilac" aria-hidden="true">AB</span>
+            <div>
+              <h3 id="profile-title">Ana Beatriz</h3>
+              <p>Doutora em Metodologia de Pesquisa Aplicada</p>
+            </div>
+          </div>
+          <section class="visible-relations" aria-labelledby="visible-relations-title">
+            <h4 id="visible-relations-title">Relações visíveis</h4>
+            <p><span class="legend-area" aria-hidden="true">◇</span> Atua em Metodologia de Pesquisa</p>
+          </section>
+          <section class="primary-area" aria-labelledby="primary-area-title">
+            <h4 id="primary-area-title">Área principal</h4>
+            <p>Metodologia de Pesquisa</p>
+          </section>
+          <button class="public-button public-button--primary detail-button" type="button">
+            Ver detalhes do nó
+          </button>
+          <p class="profile-disclaimer">
+            Consulta pública de docentes e relações de pesquisa. Recursos adicionais exigem autenticação.
+          </p>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <p>Bússola · Busca sobre orientação baseada no Lattes</p>
+    </footer>
+  </body>
+</html>

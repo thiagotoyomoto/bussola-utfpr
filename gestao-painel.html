@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Painel demonstrativo de coordenação de orientação da Bússola."
+    >
+    <title>Bússola | Coordenação de orientação</title>
+    <link rel="icon" type="image/png" href="bussola.png">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="home-page gestao-page">
+    <header class="site-header">
+      <a class="brand" href="index.html#inicio" aria-label="Bússola — página inicial">
+        <img class="brand__logo" src="bussola.png" alt="Logotipo da Bússola">
+        <span>Bússola</span>
+      </a>
+
+      <nav class="header-actions" aria-label="Navegação principal">
+        <button class="icon-button" type="button" aria-label="Pesquisar">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <circle cx="10.8" cy="10.8" r="7.2"></circle>
+            <path d="m16.2 16.2 5 5"></path>
+          </svg>
+        </button>
+        <a class="icon-button" href="index.html#sobre" aria-label="Ajuda e informações">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M9.6 9a2.5 2.5 0 1 1 4.4 1.6c-1.1 1.2-2 1.5-2 3"></path>
+            <path d="M12 17.5h.01"></path>
+          </svg>
+        </a>
+        <button
+          class="icon-button icon-button--profile"
+          type="button"
+          aria-label="Acessar perfil"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <circle cx="12" cy="8" r="4"></circle>
+            <path d="M3 21c.8-4.2 4.2-6.5 9-6.5s8.2 2.3 9 6.5"></path>
+          </svg>
+        </button>
+      </nav>
+    </header>
+
+    <main id="inicio" class="gestao-dashboard">
+      <section class="management-panel" aria-labelledby="management-title">
+        <header class="management-heading">
+          <div class="management-heading__identity">
+            <img src="bussola.png" alt="" aria-hidden="true">
+            <div>
+              <h2 id="management-title">Coordenação de orientação</h2>
+              <p>Dados demonstrativos · Relatório: professores e adesão dos últimos 30 dias</p>
+            </div>
+          </div>
+          <button class="report-button" type="button" aria-label="Gerar relatório em PDF">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M12 3v12m0 0 4-4m-4 4-4-4M5 16v4h14v-4"></path>
+            </svg>
+            Gerar relatório PDF
+          </button>
+        </header>
+
+        <section class="management-stats" aria-label="Indicadores dos últimos 30 dias">
+          <article class="management-stat">
+            <div class="management-stat__heading">
+              <h3>Taxa de adesão</h3>
+              <span class="stat-badge">Últimos 30 dias</span>
+            </div>
+            <p class="management-stat__value">35%</p>
+            <p class="management-stat__description">
+              42 alunos confirmaram orientação entre 120 solicitantes elegíveis.
+            </p>
+          </article>
+          <article class="management-stat">
+            <div class="management-stat__heading">
+              <h3>Alunos elegíveis</h3>
+              <span class="stat-badge stat-badge--outline">Graduação</span>
+            </div>
+            <p class="management-stat__value">120</p>
+            <p class="management-stat__description">
+              Alunos elegíveis para orientação no período analisado.
+            </p>
+          </article>
+          <article class="management-stat">
+            <div class="management-stat__heading">
+              <h3>Vagas abertas</h3>
+              <span class="stat-badge">18 vagas</span>
+            </div>
+            <p class="management-stat__value">18</p>
+            <p class="management-stat__description">
+              Distribuídas entre 6 professores disponíveis para orientação.
+            </p>
+          </article>
+        </section>
+
+        <form class="management-filters" role="search" action="gestao-painel.html" method="get">
+          <label class="management-search">
+            <span class="visually-hidden">Buscar professor, área ou disponibilidade</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <circle cx="10.8" cy="10.8" r="7.2"></circle>
+              <path d="m16.2 16.2 5 5"></path>
+            </svg>
+            <input
+              type="search"
+              name="q"
+              placeholder="Buscar por nome, área ou disponibilidade..."
+            >
+          </label>
+          <label class="visually-hidden" for="availability-filter">Filtrar por disponibilidade</label>
+          <select id="availability-filter" name="disponibilidade">
+            <option value="todas">Disponibilidade: Todas</option>
+            <option value="com-vagas">Com vagas</option>
+            <option value="sem-vagas">Sem vagas</option>
+          </select>
+        </form>
+
+        <div class="teacher-table-wrapper" role="region" aria-label="Docentes e disponibilidade" tabindex="0">
+          <table class="teacher-table">
+            <caption class="visually-hidden">Docentes, áreas de pesquisa, vagas disponíveis e ações</caption>
+            <thead>
+              <tr>
+                <th scope="col">Docente</th>
+                <th scope="col">Área</th>
+                <th scope="col">Disponibilidade</th>
+                <th scope="col">Ações</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">
+                  <span class="teacher-name">
+                    <span class="teacher-avatar" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" focusable="false">
+                        <circle cx="12" cy="8" r="4"></circle>
+                        <path d="M3 21c.8-4.2 4.2-6.5 9-6.5s8.2 2.3 9 6.5"></path>
+                      </svg>
+                    </span>
+                    Ana Beatriz
+                  </span>
+                </th>
+                <td>Metodologia de Pesquisa</td>
+                <td><span class="vacancy-badge">3 vagas</span></td>
+                <td><div class="teacher-actions"><a href="busca-publica.html" aria-label="Ver perfil de Ana Beatriz">Ver perfil</a><a href="docentes.html" aria-label="Ver orientações de Ana Beatriz">Ver orientações</a></div></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <span class="teacher-name">
+                    <span class="teacher-avatar" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" focusable="false">
+                        <circle cx="12" cy="8" r="4"></circle>
+                        <path d="M3 21c.8-4.2 4.2-6.5 9-6.5s8.2 2.3 9 6.5"></path>
+                      </svg>
+                    </span>
+                    Marcos Silva
+                  </span>
+                </th>
+                <td>Inteligência Artificial</td>
+                <td><span class="vacancy-badge vacancy-badge--muted">1 vaga</span></td>
+                <td><div class="teacher-actions"><a href="busca-publica.html" aria-label="Ver perfil de Marcos Silva">Ver perfil</a><a href="docentes.html" aria-label="Ver orientações de Marcos Silva">Ver orientações</a></div></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <span class="teacher-name">
+                    <span class="teacher-avatar" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" focusable="false">
+                        <circle cx="12" cy="8" r="4"></circle>
+                        <path d="M3 21c.8-4.2 4.2-6.5 9-6.5s8.2 2.3 9 6.5"></path>
+                      </svg>
+                    </span>
+                    Sofia Martins
+                  </span>
+                </th>
+                <td>Design de Experiência</td>
+                <td><span class="vacancy-badge">5 vagas</span></td>
+                <td><div class="teacher-actions"><a href="busca-publica.html" aria-label="Ver perfil de Sofia Martins">Ver perfil</a><a href="docentes.html" aria-label="Ver orientações de Sofia Martins">Ver orientações</a></div></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <span class="teacher-name">
+                    <span class="teacher-avatar" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" focusable="false">
+                        <circle cx="12" cy="8" r="4"></circle>
+                        <path d="M3 21c.8-4.2 4.2-6.5 9-6.5s8.2 2.3 9 6.5"></path>
+                      </svg>
+                    </span>
+                    Rafael Costa
+                  </span>
+                </th>
+                <td>Engenharia de Dados</td>
+                <td><span class="vacancy-badge vacancy-badge--muted">2 vagas</span></td>
+                <td><div class="teacher-actions"><a href="busca-publica.html" aria-label="Ver perfil de Rafael Costa">Ver perfil</a><a href="docentes.html" aria-label="Ver orientações de Rafael Costa">Ver orientações</a></div></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <span class="teacher-name">
+                    <span class="teacher-avatar" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" focusable="false">
+                        <circle cx="12" cy="8" r="4"></circle>
+                        <path d="M3 21c.8-4.2 4.2-6.5 9-6.5s8.2 2.3 9 6.5"></path>
+                      </svg>
+                    </span>
+                    Laura Mendes
+                  </span>
+                </th>
+                <td>Gestão de Projetos</td>
+                <td><span class="vacancy-badge">4 vagas</span></td>
+                <td><div class="teacher-actions"><a href="busca-publica.html" aria-label="Ver perfil de Laura Mendes">Ver perfil</a><a href="docentes.html" aria-label="Ver orientações de Laura Mendes">Ver orientações</a></div></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <span class="teacher-name">
+                    <span class="teacher-avatar" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" focusable="false">
+                        <circle cx="12" cy="8" r="4"></circle>
+                        <path d="M3 21c.8-4.2 4.2-6.5 9-6.5s8.2 2.3 9 6.5"></path>
+                      </svg>
+                    </span>
+                    Pedro Almeida
+                  </span>
+                </th>
+                <td>Sistemas Operacionais</td>
+                <td><span class="vacancy-badge vacancy-badge--muted">3 vagas</span></td>
+                <td><div class="teacher-actions"><a href="busca-publica.html" aria-label="Ver perfil de Pedro Almeida">Ver perfil</a><a href="docentes.html" aria-label="Ver orientações de Pedro Almeida">Ver orientações</a></div></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Bússola · Busca sobre orientação baseada no Lattes</p>
+    </footer>
+  </body>
+</html>

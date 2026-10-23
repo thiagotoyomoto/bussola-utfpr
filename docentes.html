@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Gerencie disponibilidade, temas de TCC e métricas de busca na Bússola."
+    >
+    <title>Bússola | Painel docente</title>
+    <link rel="icon" type="image/png" href="bussola.png">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="home-page docentes-page">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Bússola — página inicial">
+        <img class="brand__logo" src="bussola.png" alt="Logotipo da Bússola">
+        <span>Bússola</span>
+      </a>
+
+      <nav class="header-actions" aria-label="Navegação principal">
+        <button class="icon-button" type="button" aria-label="Pesquisar">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <circle cx="10.8" cy="10.8" r="7.2"></circle>
+            <path d="m16.2 16.2 5 5"></path>
+          </svg>
+        </button>
+        <a class="icon-button" href="index.html#sobre" aria-label="Ajuda e informações">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M9.6 9a2.5 2.5 0 1 1 4.4 1.6c-1.1 1.2-2 1.5-2 3"></path>
+            <path d="M12 17.5h.01"></path>
+          </svg>
+        </a>
+        <button
+          class="icon-button icon-button--profile"
+          type="button"
+          aria-label="Acessar perfil"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <circle cx="12" cy="8" r="4"></circle>
+            <path d="M3 21c.8-4.2 4.2-6.5 9-6.5s8.2 2.3 9 6.5"></path>
+          </svg>
+        </button>
+      </nav>
+    </header>
+
+    <main id="inicio" class="docentes-dashboard">
+      <header class="docentes-heading">
+        <div>
+          <h2 id="dashboard-title">Painel docente</h2>
+          <p>Dados demonstrativos · Gerencie horários, vagas, temas de TCC e métricas de busca</p>
+        </div>
+        <span class="demo-badge"><span aria-hidden="true"></span>Dados demonstrativos</span>
+      </header>
+
+      <div class="docentes-layout" aria-labelledby="dashboard-title">
+        <div class="docentes-main-column">
+          <section class="dashboard-card availability-card" aria-labelledby="availability-title">
+            <div class="dashboard-card__heading">
+              <div>
+                <h3 id="availability-title">Disponibilidade para orientação</h3>
+                <p>Defina horários e vagas disponíveis.</p>
+              </div>
+              <button
+                class="dashboard-button dashboard-button--primary"
+                type="button"
+                aria-label="Salvar alterações na disponibilidade"
+              >
+                Salvar alterações
+              </button>
+            </div>
+
+            <ul class="availability-days" aria-label="Horários de orientação">
+              <li class="availability-day">
+                <div><h4>Segunda-feira</h4><span class="time-badge">14:00 – 18:00</span></div>
+                <p>Horário de orientação</p>
+              </li>
+              <li class="availability-day">
+                <div><h4>Quarta-feira</h4><span class="time-badge">09:00 – 12:00</span></div>
+                <p>Horário de orientação</p>
+              </li>
+              <li class="availability-day">
+                <div><h4>Sexta-feira</h4><span class="time-badge">10:00 – 13:00</span></div>
+                <p>Horário de orientação</p>
+              </li>
+            </ul>
+
+            <div class="availability-details">
+              <section class="info-card" aria-labelledby="vacancies-title">
+                <div class="info-card__heading">
+                  <h4 id="vacancies-title">Vagas disponíveis</h4>
+                  <span class="time-badge">12 vagas</span>
+                </div>
+                <p class="vacancies-count">12</p>
+                <p>Vagas disponíveis para orientação no período atual.</p>
+              </section>
+              <section class="info-card research-areas" aria-labelledby="research-areas-title">
+                <div class="info-card__heading">
+                  <h4 id="research-areas-title">Áreas de pesquisa</h4>
+                  <span class="outline-badge">3 áreas</span>
+                </div>
+                <p class="research-areas__list">IA, UX, Data Science</p>
+                <p>Áreas de pesquisa disponíveis para orientação.</p>
+              </section>
+            </div>
+          </section>
+
+          <section class="dashboard-card topics-card" aria-labelledby="topics-title">
+            <div class="dashboard-card__heading">
+              <div>
+                <h3 id="topics-title">Temas de TCC</h3>
+                <p>Adicione, edite e remova temas propostos.</p>
+              </div>
+              <button
+                class="dashboard-button dashboard-button--primary"
+                type="button"
+                aria-label="Adicionar novo tema de TCC"
+              >
+                Adicionar tema
+              </button>
+            </div>
+
+            <ul class="topic-list" aria-label="Temas de TCC propostos">
+              <li class="topic-item">
+                <div>
+                  <h4>Inteligência Artificial em Saúde</h4>
+                  <p>Autor: Prof. Dr. João Silva</p>
+                </div>
+                <div class="topic-actions" aria-label="Ações para Inteligência Artificial em Saúde">
+                  <button class="topic-action" type="button" aria-label="Editar tema Inteligência Artificial em Saúde">Editar</button>
+                  <button class="topic-action topic-action--remove" type="button" aria-label="Remover tema Inteligência Artificial em Saúde">Remover</button>
+                </div>
+              </li>
+              <li class="topic-item">
+                <div>
+                  <h4>UX em Ambientes de Realidade Virtual</h4>
+                  <p>Autor: Prof. Dr. João Silva</p>
+                </div>
+                <div class="topic-actions" aria-label="Ações para UX em Ambientes de Realidade Virtual">
+                  <button class="topic-action" type="button" aria-label="Editar tema UX em Ambientes de Realidade Virtual">Editar</button>
+                  <button class="topic-action topic-action--remove" type="button" aria-label="Remover tema UX em Ambientes de Realidade Virtual">Remover</button>
+                </div>
+              </li>
+              <li class="topic-item">
+                <div>
+                  <h4>Análise de Dados em Educação</h4>
+                  <p>Autor: Prof. Dr. João Silva</p>
+                </div>
+                <div class="topic-actions" aria-label="Ações para Análise de Dados em Educação">
+                  <button class="topic-action" type="button" aria-label="Editar tema Análise de Dados em Educação">Editar</button>
+                  <button class="topic-action topic-action--remove" type="button" aria-label="Remover tema Análise de Dados em Educação">Remover</button>
+                </div>
+              </li>
+            </ul>
+          </section>
+        </div>
+
+        <aside class="dashboard-card metrics-card" aria-labelledby="metrics-title">
+          <div class="dashboard-card__heading metrics-card__heading">
+            <div>
+              <h3 id="metrics-title">Métricas de busca de temas</h3>
+              <p>Visualização do interesse dos alunos.</p>
+            </div>
+          </div>
+
+          <label class="period-select-label" for="metrics-period">Período das métricas</label>
+          <select class="period-select" id="metrics-period" aria-label="Período das métricas">
+            <option>Últimos 30 dias</option>
+          </select>
+
+          <figure class="search-chart" aria-labelledby="chart-caption">
+            <figcaption id="chart-caption">
+              <span>Buscas por Tópico</span>
+              <span>Total: 1.2k</span>
+            </figcaption>
+            <ul class="chart-list">
+              <li>
+                <span>IA em Saúde</span>
+                <span class="chart-bar" role="progressbar" aria-label="Buscas por IA em Saúde" aria-valuemin="0" aria-valuemax="450" aria-valuenow="450"><span></span></span>
+                <span>450</span>
+              </li>
+              <li>
+                <span>UX VR</span>
+                <span class="chart-bar" role="progressbar" aria-label="Buscas por UX VR" aria-valuemin="0" aria-valuemax="450" aria-valuenow="350"><span></span></span>
+                <span>350</span>
+              </li>
+              <li>
+                <span>Análise de Dados</span>
+                <span class="chart-bar" role="progressbar" aria-label="Buscas por Análise de Dados" aria-valuemin="0" aria-valuemax="450" aria-valuenow="275"><span></span></span>
+                <span>275</span>
+              </li>
+              <li>
+                <span>Outros</span>
+                <span class="chart-bar" role="progressbar" aria-label="Outras buscas" aria-valuemin="0" aria-valuemax="450" aria-valuenow="125"><span></span></span>
+                <span>125</span>
+              </li>
+            </ul>
+          </figure>
+
+          <section class="metrics-note" aria-labelledby="metrics-note-title">
+            <h4 id="metrics-note-title">Observação</h4>
+            <p>Os dados apresentados são meramente ilustrativos e não refletem a realidade institucional.</p>
+          </section>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <p>Bússola · Busca sobre orientação baseada no Lattes</p>
+    </footer>
+  </body>
+</html>

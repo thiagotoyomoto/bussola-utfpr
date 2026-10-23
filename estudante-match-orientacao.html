@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Encontre docentes e orientações compatíveis com sua área de pesquisa na Bússola."
+    >
+    <title>Bússola | Encontrar orientação</title>
+    <link rel="icon" type="image/png" href="bussola.png">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="home-page student-match-page">
+    <header class="site-header">
+      <a class="brand" href="index.html#inicio" aria-label="Bússola — página inicial">
+        <img class="brand__logo" src="bussola.png" alt="Logotipo da Bússola">
+        <span>Bússola</span>
+      </a>
+
+      <nav class="header-actions" aria-label="Navegação principal">
+        <button class="icon-button" type="button" aria-label="Pesquisar">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <circle cx="10.8" cy="10.8" r="7.2"></circle>
+            <path d="m16.2 16.2 5 5"></path>
+          </svg>
+        </button>
+        <a class="icon-button" href="index.html#sobre" aria-label="Ajuda e informações">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M9.6 9a2.5 2.5 0 1 1 4.4 1.6c-1.1 1.2-2 1.5-2 3"></path>
+            <path d="M12 17.5h.01"></path>
+          </svg>
+        </a>
+        <button
+          class="icon-button icon-button--profile"
+          type="button"
+          aria-label="Acessar perfil"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <circle cx="12" cy="8" r="4"></circle>
+            <path d="M3 21c.8-4.2 4.2-6.5 9-6.5s8.2 2.3 9 6.5"></path>
+          </svg>
+        </button>
+      </nav>
+    </header>
+
+    <main id="inicio" class="student-match">
+      <header class="student-match__heading">
+        <img src="bussola.png" alt="" aria-hidden="true">
+        <div>
+          <h2 id="match-title">Encontrar orientação</h2>
+          <p>Busca semântica por docente e área de pesquisa</p>
+        </div>
+      </header>
+
+      <div class="student-match__layout" aria-labelledby="match-title">
+        <aside class="match-search-panel" aria-labelledby="semantic-search-title">
+          <h3 id="semantic-search-title">Busca semântica</h3>
+          <p class="match-panel-description">
+            Descreva o docente ou a área de pesquisa que você procura.
+          </p>
+
+          <form class="match-form" role="search" action="estudante-match-orientacao.html" method="get">
+            <div class="match-field">
+              <label for="teacher-query">Docente</label>
+              <span class="match-input">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <circle cx="10.8" cy="10.8" r="7.2"></circle>
+                  <path d="m16.2 16.2 5 5"></path>
+                </svg>
+                <input id="teacher-query" name="docente" type="search" placeholder="Ex: Ana Beatriz">
+              </span>
+            </div>
+
+            <div class="match-field">
+              <label for="area-query">Área de interesse</label>
+              <span class="match-input">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <circle cx="10.8" cy="10.8" r="7.2"></circle>
+                  <path d="m16.2 16.2 5 5"></path>
+                </svg>
+                <input id="area-query" name="area" type="search" value="Metodologia de Pesquisa">
+              </span>
+            </div>
+
+            <fieldset class="match-filters">
+              <legend>Filtros</legend>
+              <div class="match-filter-row">
+                <span class="match-filter-label">Titulação</span>
+                <div class="match-filter-options" role="group" aria-label="Filtrar por titulação">
+                  <button type="button" aria-pressed="true">Mestrado</button>
+                  <button type="button" aria-pressed="false">Doutorado</button>
+                </div>
+              </div>
+              <div class="match-filter-row">
+                <span class="match-filter-label">Idioma</span>
+                <div class="match-filter-options" role="group" aria-label="Filtrar por idioma">
+                  <button type="button" aria-pressed="true">Inglês</button>
+                </div>
+              </div>
+              <div class="match-filter-row">
+                <span class="match-filter-label">Área de pesquisa</span>
+                <div class="match-filter-options" role="group" aria-label="Filtrar por área">
+                  <button type="button" aria-pressed="true">Metodologia</button>
+                </div>
+              </div>
+              <div class="match-filter-row">
+                <span class="match-filter-label">Vagas</span>
+                <div class="match-filter-options" role="group" aria-label="Filtrar por vagas">
+                  <button class="available-filter" type="button" aria-pressed="true">✓ Com vagas</button>
+                </div>
+              </div>
+            </fieldset>
+
+            <button class="match-clear-filters" type="reset">Limpar filtros</button>
+            <button class="match-submit" type="submit">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <circle cx="10.8" cy="10.8" r="7.2"></circle>
+                <path d="m16.2 16.2 5 5"></path>
+              </svg>
+              Buscar docentes
+            </button>
+          </form>
+
+          <div class="match-quick-actions">
+            <h4>Ações rápidas</h4>
+            <a href="busca-publica.html" aria-label="Explorar grafo público de conhecimento">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="m3 6 6-3 6 3 6-3v15l-6 3-6-3-6 3zM9 3v15m6-12v15"></path>
+              </svg>
+              Explorar grafo de conhecimento
+            </a>
+          </div>
+        </aside>
+
+        <section class="match-results" aria-labelledby="results-heading">
+          <header class="match-results__heading">
+            <div>
+              <h3 id="results-heading">Resultados para "Metodologia de Pesquisa"</h3>
+              <p>1 docente encontrado com afinidade alta</p>
+            </div>
+            <span class="demonstrative-badge">Demonstrativo</span>
+          </header>
+
+          <article class="match-result-card" aria-labelledby="teacher-name">
+            <span class="match-avatar" aria-hidden="true">AB</span>
+            <div class="match-result-card__profile">
+              <div class="match-teacher-title">
+                <h4 id="teacher-name">Ana Beatriz</h4>
+                <span class="teacher-vacancies">3 vagas</span>
+              </div>
+              <p class="teacher-qualification">Doutora em Metodologia de Pesquisa Aplicada</p>
+              <p class="teacher-bio">
+                Especializada em métodos qualitativos, análise de discurso e pesquisa-ação.
+              </p>
+            </div>
+            <div class="affinity-score" aria-label="Afinidade alta: 92 por cento">
+              <span>92%</span>
+              <strong>Afinidade alta</strong>
+              <small>4 critérios</small>
+            </div>
+            <div class="match-result-actions">
+              <a class="match-action-button" href="busca-publica.html" aria-label="Ver perfil de Ana Beatriz">
+                Ver perfil
+              </a>
+              <button class="match-action-button match-action-button--primary" type="button" aria-label="Candidatar-se à orientação com Ana Beatriz">
+                Candidatar-se
+              </button>
+            </div>
+          </article>
+
+          <div class="match-details">
+            <section class="match-detail-card" aria-labelledby="topics-title">
+              <h3 id="topics-title">Temas de TCC</h3>
+              <ul class="thesis-topics">
+                <li>Análise de Discurso em Redes Sociais</li>
+                <li>Metodologia de Pesquisa Qualitativa</li>
+                <li>Etnografia Digital</li>
+              </ul>
+            </section>
+
+            <section class="match-detail-card affinity-explanation" aria-labelledby="affinity-title">
+              <h3 id="affinity-title">Sobre a afinidade</h3>
+              <p>
+                Afinidade demonstrativa de 92%, baseada em tema, área, palavras-chave e métodos de pesquisa. Indica alinhamento temático com sua busca, não probabilidade de aceitação.
+              </p>
+              <a href="#affinity-help" aria-describedby="affinity-title">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M9.6 9a2.5 2.5 0 1 1 4.4 1.6c-1.1 1.2-2 1.5-2 3"></path>
+                  <path d="M12 17.5h.01"></path>
+                </svg>
+                Saiba mais sobre o cálculo
+              </a>
+              <span class="visually-hidden" id="affinity-help">
+                A afinidade é uma estimativa demonstrativa de alinhamento entre os termos pesquisados e as informações públicas do docente; ela não prevê aprovação de candidatura.
+              </span>
+            </section>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <p>Bússola · Busca sobre orientação baseada no Lattes</p>
+    </footer>
+  </body>
+</html>

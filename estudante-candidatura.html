@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Preencha sua candidatura demonstrativa para orientação de TCC na Bússola."
+    >
+    <title>Bússola | Candidatura para orientação</title>
+    <link rel="icon" type="image/png" href="bussola.png">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="home-page student-application-page">
+    <header class="site-header">
+      <a class="brand" href="index.html#inicio" aria-label="Bússola — página inicial">
+        <img class="brand__logo" src="bussola.png" alt="Logotipo da Bússola">
+        <span>Bússola</span>
+      </a>
+
+      <nav class="header-actions" aria-label="Navegação principal">
+        <button class="icon-button" type="button" aria-label="Pesquisar">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <circle cx="10.8" cy="10.8" r="7.2"></circle>
+            <path d="m16.2 16.2 5 5"></path>
+          </svg>
+        </button>
+        <a class="icon-button" href="index.html#sobre" aria-label="Ajuda e informações">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M9.6 9a2.5 2.5 0 1 1 4.4 1.6c-1.1 1.2-2 1.5-2 3"></path>
+            <path d="M12 17.5h.01"></path>
+          </svg>
+        </a>
+        <button
+          class="icon-button icon-button--profile"
+          type="button"
+          aria-label="Acessar perfil"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <circle cx="12" cy="8" r="4"></circle>
+            <path d="M3 21c.8-4.2 4.2-6.5 9-6.5s8.2 2.3 9 6.5"></path>
+          </svg>
+        </button>
+      </nav>
+    </header>
+
+    <main id="inicio" class="student-application">
+      <nav class="application-breadcrumb" aria-label="Trilha de navegação">
+        <a href="estudante-match-orientacao.html">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="m15 18-6-6 6-6M9 12h12"></path>
+          </svg>
+          Voltar à busca
+        </a>
+        <span aria-hidden="true">/</span>
+        <a href="estudante-perfil-docente.html">Ana Beatriz</a>
+        <span aria-hidden="true">/</span>
+        <span aria-current="page">Candidatura</span>
+      </nav>
+
+      <header class="application-heading">
+        <div>
+          <h2 id="application-title">Enviar candidatura para orientação</h2>
+          <p>Apresente sua ideia e conte à docente por que deseja desenvolver esse tema.</p>
+        </div>
+        <div class="application-heading__actions">
+          <a class="return-profile-link" href="estudante-perfil-docente.html">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="m15 18-6-6 6-6M9 12h12"></path>
+            </svg>
+            Voltar ao perfil
+          </a>
+          <span class="application-demo-badge">Dados demonstrativos</span>
+        </div>
+      </header>
+
+      <div class="application-layout" aria-labelledby="application-title">
+        <form class="application-form" action="estudante-candidatura.html" method="get">
+          <section class="application-section" aria-labelledby="academic-info-title">
+            <div class="application-section__heading">
+              <h3 id="academic-info-title">Identificação acadêmica</h3>
+              <p><span aria-hidden="true">*</span> Campos obrigatórios · dados fictícios</p>
+            </div>
+            <div class="academic-fields">
+              <div class="application-field">
+                <label for="student-name">Nome completo <span aria-hidden="true">*</span></label>
+                <input id="student-name" name="nome" type="text" value="Estudante Exemplo" autocomplete="name" required>
+              </div>
+              <div class="application-field">
+                <label for="student-id">Matrícula <span aria-hidden="true">*</span></label>
+                <input id="student-id" name="matricula" type="text" value="DEMO-2026-001" required>
+              </div>
+              <div class="application-field">
+                <label for="student-course">Curso <span aria-hidden="true">*</span></label>
+                <input id="student-course" name="curso" type="text" value="Ciências Sociais" required>
+              </div>
+              <div class="application-field">
+                <label for="student-period">Período <span aria-hidden="true">*</span></label>
+                <input id="student-period" name="periodo" type="text" value="7º período" required>
+              </div>
+              <div class="application-field">
+                <label for="student-email">E-mail acadêmico <span aria-hidden="true">*</span></label>
+                <input id="student-email" name="email" type="email" value="estudante@example.invalid" autocomplete="email" required>
+              </div>
+            </div>
+          </section>
+
+          <section class="application-section proposal-section" aria-labelledby="proposal-title">
+            <h3 id="proposal-title">Sua proposta e interesses</h3>
+            <div class="application-field">
+              <label for="proposal-subject">Título provisório da proposta <span aria-hidden="true">*</span></label>
+              <input
+                id="proposal-subject"
+                name="titulo"
+                type="text"
+                value="Narrativas sobre educação em comunidades de redes sociais"
+                required
+              >
+            </div>
+            <div class="application-field">
+              <label for="research-interests">Proposta e interesses de pesquisa <span aria-hidden="true">*</span></label>
+              <textarea id="research-interests" name="proposta" rows="3" required>Quero investigar como estudantes constroem sentidos sobre a experiência universitária em redes sociais. Pretendo delimitar um corpus de publicações públicas e analisá-lo com métodos qualitativos e análise de discurso.</textarea>
+            </div>
+            <div class="application-field">
+              <label for="orientation-motivation">Motivação para a orientação <span aria-hidden="true">*</span></label>
+              <textarea id="orientation-motivation" name="motivacao" rows="3" required>Tenho interesse em pesquisa qualitativa e cultura digital. Busco orientação para formular o problema, definir critérios éticos de coleta e desenvolver uma análise de discurso consistente.</textarea>
+            </div>
+          </section>
+
+          <section class="application-attachment" aria-label="Anexar material de apoio">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="m21.4 11.1-8.8 9.1a5 5 0 0 1-7.1-7.1l9.2-9.2a3.3 3.3 0 0 1 4.7 4.7l-9.2 9.2a1.7 1.7 0 0 1-2.4-2.4l8.4-8.4"></path>
+            </svg>
+            <div class="attachment-description">
+              <label for="supporting-file">Pré-projeto ou material de apoio (opcional)</label>
+              <p id="file-help">Nenhum arquivo selecionado · PDF, até 10 MB</p>
+            </div>
+            <label class="attachment-button" for="supporting-file">Adicionar arquivo</label>
+            <input
+              class="visually-hidden-file"
+              id="supporting-file"
+              name="arquivo"
+              type="file"
+              accept=".pdf,application/pdf"
+              aria-describedby="file-help"
+            >
+          </section>
+
+          <div class="application-consent">
+            <input id="application-consent" name="consentimento" type="checkbox" required>
+            <label for="application-consent">
+              Revisei minha proposta e autorizo o compartilhamento destes dados acadêmicos com a docente para avaliação da candidatura. <span aria-hidden="true">*</span>
+            </label>
+          </div>
+
+          <div class="application-submit-row">
+            <p>Exemplo de preenchimento. Nenhuma candidatura foi enviada.</p>
+            <button type="button" aria-label="Enviar candidatura demonstrativa">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="m22 2-7 20-4-9-9-4 20-7ZM22 2 11 13"></path>
+              </svg>
+              Enviar candidatura
+            </button>
+          </div>
+        </form>
+
+        <aside class="application-sidebar" aria-label="Resumo da candidatura e informações">
+          <section class="application-summary" aria-labelledby="application-summary-title">
+            <div class="application-summary__heading">
+              <h3 id="application-summary-title">Sua candidatura</h3>
+              <span>Não enviada</span>
+            </div>
+            <div class="application-faculty">
+              <span class="application-faculty__avatar" aria-hidden="true">AB</span>
+              <div>
+                <h4>Ana Beatriz</h4>
+                <p>Doutora em Metodologia de Pesquisa Aplicada</p>
+              </div>
+            </div>
+            <div class="application-topic">
+              <h4>Tema de TCC</h4>
+              <p>Análise de Discurso em Redes Sociais</p>
+              <span>Área: Metodologia de Pesquisa</span>
+            </div>
+            <div class="application-summary__badges" aria-label="Indicadores da candidatura">
+              <span>92% de afinidade</span>
+              <span>3 vagas disponíveis</span>
+            </div>
+            <p class="application-affinity-note">
+              Afinidade demonstrativa por tema, área, palavras-chave e métodos. Não indica probabilidade de aceitação.
+            </p>
+          </section>
+
+          <section class="application-warning" aria-labelledby="before-submit-title">
+            <h3 id="before-submit-title">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M12 11v5m0-8h.01"></path>
+              </svg>
+              Antes de enviar
+            </h3>
+            <p>O envio não garante aceite. A candidatura depende da avaliação da docente e a disponibilidade de vagas ainda precisa de confirmação.</p>
+            <p>Confira o tema, seus dados e a proposta. Evite incluir dados pessoais sensíveis ou informações de participantes da pesquisa.</p>
+            <strong>Demonstração estática · sem envio real</strong>
+          </section>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <p>Bússola · Busca sobre orientação baseada no Lattes</p>
+    </footer>
+    <script>
+      document.querySelector(".application-form").addEventListener("submit", (event) => {
+        event.preventDefault();
+      });
+    </script>
+  </body>
+</html>
