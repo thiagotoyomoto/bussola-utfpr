@@ -1,0 +1,168 @@
+.app-header {
+  align-items: center;
+  background: var(--bg-surface);
+  border: 0.0625rem solid var(--border);
+  border-radius: var(--radius);
+  display: flex;
+  height: 2.9375rem;
+  justify-content: space-between;
+  padding: 0 1rem 0 1.125rem;
+  position: relative;
+  z-index: 10;
+}
+
+.app-brand {
+  background: transparent;
+  border: 0;
+  border-radius: var(--radius);
+  color: var(--text);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.125rem;
+  font-weight: 800;
+  padding: 0;
+}
+
+.app-brand__image {
+  width: 2.5rem;
+  height: 2.5rem;
+  object-fit: contain;
+}
+
+.app-brand__text {
+  color: var(--text);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.icon-button {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  border-radius: 50%;
+  color: var(--brand);
+  cursor: pointer;
+  display: inline-grid;
+  height: 2.625rem;
+  place-items: center;
+  padding: 0.3125rem;
+  text-decoration: none;
+  width: 2.625rem;
+}
+
+.icon-button:hover {
+  background-color: var(--bg-soft);
+}
+
+.icon-button svg {
+  display: block;
+  fill: none;
+  height: 2.125rem;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2.5;
+  width: 2.125rem;
+}
+
+.icon-button--profile {
+  background-color: var(--bg-page);
+}
+
+.icon-button--profile:hover {
+  background-color: #e9defb;
+}
+
+.app-header__popover {
+  background: var(--bg-surface);
+  border: 0.0625rem solid var(--border);
+  border-radius: var(--radius);
+  display: grid;
+  gap: 0.75rem;
+  inset: auto 1.75rem auto auto;
+  margin: 0;
+  max-height: calc(100vh - 6rem);
+  max-width: min(34rem, calc(100vw - 2rem));
+  overflow: auto;
+  padding: 1rem;
+  position: fixed;
+  top: 4.75rem;
+  width: min(34rem, calc(100vw - 2rem));
+  box-shadow: 0 0.75rem 2rem rgb(50 30 75 / 20%);
+}
+
+.app-header__popover:not([open]) {
+  display: none;
+}
+
+.app-header__popover::backdrop {
+  background: linear-gradient(
+    to bottom,
+    transparent 0 4.25rem,
+    rgb(31 17 49 / 35%) 4.25rem
+  );
+}
+
+.app-header__account {
+  align-items: center;
+  border-top: 0.0625rem solid #d5d0dc;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding-top: 0.75rem;
+}
+
+.google-login-button {
+  background: var(--brand-accent);
+  border: 0.0625rem solid var(--border);
+  border-radius: var(--radius-pill);
+  color: var(--brand);
+  cursor: pointer;
+  font-weight: 700;
+  padding: 0.5rem 0.875rem;
+}
+
+.profile-selector select {
+  appearance: none;
+  background: var(--bg-surface);
+  border: 0.0625rem solid var(--border);
+  border-radius: var(--radius);
+  color: var(--brand);
+  cursor: pointer;
+  font-weight: 700;
+  min-height: 2.5rem;
+  padding: 0.5rem 0.75rem;
+}
+
+@media (max-width: 40rem) {
+  .app-header {
+    padding-inline: 0.625rem;
+  }
+
+  .header-actions {
+    gap: 0.125rem;
+  }
+
+  .icon-button {
+    height: 2.375rem;
+    width: 2.375rem;
+  }
+
+  .icon-button svg {
+    height: 1.8125rem;
+    width: 1.8125rem;
+  }
+
+  .app-header__popover {
+    inset: auto 1rem auto 1rem;
+    max-width: calc(100vw - 2rem);
+    top: 4.25rem;
+    width: 100%;
+  }
+}

@@ -1,0 +1,82 @@
+:root {
+  --bg-page: #f6f0ff;
+  --bg-surface: #fffdf0;
+  --bg-soft: #f1eaff;
+  --brand: #321e4b;
+  --brand-strong: #321e4b;
+  --brand-accent: #ffd54f;
+  --text: #2f3542;
+  --text-soft: #45404d;
+  --border: #321e4b;
+  --shadow: 0 0.125rem 0.25rem rgb(47 53 66 / 18%);
+  --radius: 0.25rem;
+  --radius-sm: 0.125rem;
+  --radius-pill: 999rem;
+  color: var(--text);
+  background: var(--bg-page);
+  font-family: 'Nunito Sans', 'Plus Jakarta Sans', 'Segoe UI', Arial, sans-serif;
+  font-synthesis: none;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+  color-scheme: light;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 20rem;
+  min-height: 100vh;
+  background: var(--bg-page);
+  color: var(--text);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[role='button']:focus-visible,
+summary:focus-visible,
+[tabindex]:focus-visible {
+  outline: 0.1875rem solid #174ea6;
+  outline-offset: 0.1875rem;
+}
+
+.sr-only,
+.visually-hidden {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+#root {
+  min-height: 100vh;
+}

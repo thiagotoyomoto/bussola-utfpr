@@ -1,0 +1,41 @@
+.app-shell {
+  display: grid;
+  gap: 1.0625rem;
+  grid-template-rows: auto 1fr;
+  min-height: 100vh;
+  padding: 0.875rem 1.75rem 1.125rem;
+}
+
+.page-content-wrapper {
+  width: 100%;
+}
+
+.page-content {
+  padding-block: 2rem;
+}
+
+.page-content h1 {
+  font-size: clamp(2rem, 2vw + 1rem, 2.75rem);
+  line-height: 1.2;
+  margin: 0 0 1rem;
+  color: var(--brand-strong);
+}
+
+.page-content p,
+.page-content li,
+.page-content label,
+.page-content th,
+.page-content td {
+  color: var(--text-soft);
+}
+
+@media (max-width: 40rem) {
+  .app-shell {
+    gap: 0.75rem;
+    padding: 0.75rem 1rem 1rem;
+  }
+
+  .page-content {
+    padding-block: 1.5rem;
+  }
+}

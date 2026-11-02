@@ -1,0 +1,295 @@
+.student-application {
+  width: 100%;
+}
+
+.application-breadcrumb {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.application-breadcrumb a,
+.application-breadcrumb button {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  color: #321e4b;
+  cursor: pointer;
+  display: inline-flex;
+  gap: 0.375rem;
+  font-weight: 700;
+  padding: 0;
+  text-decoration: none;
+}
+
+.application-breadcrumb svg,
+.return-profile-link svg {
+  display: block;
+  fill: none;
+  height: 1rem;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2.5;
+  width: 1rem;
+}
+
+.application-heading {
+  align-items: center;
+  background: #fffdf0;
+  border: 0.0625rem solid #321e4b;
+  border-radius: var(--radius);
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 1.25rem 1.5rem;
+}
+
+.application-heading h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.application-heading p {
+  margin: 0.5rem 0 0;
+}
+
+.application-heading__actions {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: flex-end;
+}
+
+.return-profile-link {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  color: #321e4b;
+  cursor: pointer;
+  display: inline-flex;
+  gap: 0.375rem;
+  font-weight: 700;
+  padding: 0;
+  text-decoration: none;
+}
+
+.application-demo-badge {
+  background: #f1eaff;
+  border: 0.0625rem solid #321e4b;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.5rem 0.75rem;
+}
+
+.application-layout {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: minmax(0, 2fr) minmax(17rem, 1fr);
+}
+
+.application-form,
+.application-sidebar {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.application-section,
+.application-summary,
+.application-warning {
+  background: #fffdf0;
+  border: 0.0625rem solid #321e4b;
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+}
+
+.application-section__heading {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.application-section__heading h2,
+.application-summary h2,
+.application-warning h2 {
+  margin: 0;
+}
+
+.application-section__heading p {
+  margin: 0;
+}
+
+.academic-fields {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.application-field {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.application-field label {
+  font-weight: 700;
+}
+
+.application-field input,
+.application-field textarea,
+.period-select {
+  background: #fff;
+  border: 0.0625rem solid #321e4b;
+  border-radius: var(--radius);
+  min-height: 2.75rem;
+  padding: 0.625rem 0.75rem;
+  width: 100%;
+}
+
+.application-field textarea {
+  min-height: 6rem;
+  resize: vertical;
+}
+
+.application-consent {
+  align-items: flex-start;
+  display: flex;
+  gap: 0.75rem;
+}
+
+.application-consent input {
+  margin-top: 0.25rem;
+}
+
+.application-submit-row {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.application-submit-row p {
+  margin: 0;
+}
+
+.application-submit-row button {
+  align-items: center;
+  background: #ffd54f;
+  border: 0.125rem solid #321e4b;
+  border-radius: var(--radius);
+  color: #321e4b;
+  cursor: pointer;
+  display: inline-flex;
+  gap: 0.5rem;
+  font-weight: 700;
+  padding: 0.75rem 1.25rem;
+}
+
+.application-submit-row button svg {
+  display: block;
+  fill: none;
+  height: 1rem;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2.5;
+  width: 1rem;
+}
+
+.application-summary__heading,
+.application-faculty,
+.application-summary__badges {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.application-summary__heading {
+  margin-bottom: 1rem;
+}
+
+.application-faculty {
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 1rem;
+}
+
+.application-faculty__avatar {
+  align-items: center;
+  background: #e9defb;
+  border: 0.0625rem solid #321e4b;
+  border-radius: 50%;
+  display: inline-flex;
+  font-weight: 800;
+  height: 2.5rem;
+  justify-content: center;
+  width: 2.5rem;
+}
+
+.application-topic {
+  background: #fff;
+  border: 0.0625rem solid #321e4b;
+  border-radius: var(--radius);
+  padding: 1rem;
+}
+
+.application-topic h3 {
+  margin: 0 0 0.5rem;
+}
+
+.application-summary__badges {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-top: 1rem;
+}
+
+.application-summary__badges span {
+  background: #f1eaff;
+  border: 0.0625rem solid #321e4b;
+  border-radius: 999px;
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.375rem 0.625rem;
+}
+
+.application-affinity-note {
+  margin: 1rem 0 0;
+}
+
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+a:focus-visible {
+  outline: 0.1875rem solid #174ea6;
+  outline-offset: 0.1875rem;
+}
+
+@media (max-width: 64rem) {
+  .application-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 40rem) {
+  .application-heading,
+  .application-section__heading,
+  .application-submit-row,
+  .application-summary__heading,
+  .application-faculty {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .academic-fields {
+    grid-template-columns: 1fr;
+  }
+}
