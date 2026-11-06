@@ -1,6 +1,6 @@
 import './PainelDocente.css'
 
-function PainelDocente() {
+function PainelDocente({ onNavigate }) {
   return (
     <main className="docentes-dashboard" id="inicio">
       <header className="docentes-heading">
@@ -98,7 +98,7 @@ function PainelDocente() {
                 className="dashboard-button dashboard-button--primary"
                 type="button"
                 aria-label="Adicionar novo tema de TCC"
-                disabled
+                onClick={() => onNavigate('cadastrar-tema')}
               >
                 Adicionar tema
               </button>

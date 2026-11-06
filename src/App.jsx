@@ -7,6 +7,7 @@ import GrafoConhecimento from './pages/GrafoConhecimento/GrafoConhecimento.jsx'
 import EncontrarOrientacao from './pages/EncontrarOrientacao/EncontrarOrientacao.jsx'
 import PerfilDocente from './pages/PerfilDocente/PerfilDocente.jsx'
 import Gestao from './pages/Gestao/Gestao.jsx'
+import CadastrarTema from './pages/CadastrarTema/CadastrarTema.jsx'
 import './App.css'
 
 const pages = [
@@ -46,6 +47,13 @@ const pages = [
     label: 'Perfil docente',
     title: 'Perfil docente e temas de TCC',
     access: ['student', 'docente', 'coordenador'],
+    showInMenu: false,
+  },
+  {
+    id: 'cadastrar-tema',
+    label: 'Cadastrar tema',
+    title: 'Cadastro de Temas de TCC',
+    access: ['docente'],
     showInMenu: false,
   },
   {
@@ -98,7 +106,7 @@ function App() {
     }
 
     if (safeCurrentPage === 'docentes') {
-      return <PainelDocente />
+      return <PainelDocente onNavigate={setCurrentPage} />
     }
 
     if (safeCurrentPage === 'candidatura') {
@@ -115,6 +123,10 @@ function App() {
 
     if (safeCurrentPage === 'perfil-docente') {
       return <PerfilDocente profile={profile} onNavigate={setCurrentPage} />
+    }
+
+    if (safeCurrentPage === 'cadastrar-tema') {
+      return <CadastrarTema onNavigate={setCurrentPage} />
     }
 
     if (safeCurrentPage === 'gestao') {
