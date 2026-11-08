@@ -1,9 +1,16 @@
 import './QuemSomos.css'
+import type { NavigateToPage } from '../../types'
 
-function QuemSomos({ onNavigate, onOpenMenu, isLoggedIn }) {
+interface QuemSomosProps {
+  onNavigate: NavigateToPage
+  onSignIn: () => void
+  isLoggedIn: boolean
+}
+
+function QuemSomos({ onNavigate, onSignIn, isLoggedIn }: QuemSomosProps) {
   return (
     <div className="page-shell page-shell--home">
-      <main className="home-main" id="inicio">
+      <main className="home-main" id="main-content" tabIndex={-1}>
         <section className="about" id="sobre" aria-labelledby="about-title">
           <h1 className="about__heading" id="about-title">
             <img className="about__logo" src="/bussola.png" alt="" aria-hidden="true" />
@@ -28,12 +35,12 @@ function QuemSomos({ onNavigate, onOpenMenu, isLoggedIn }) {
                 onClick={() =>
                   isLoggedIn
                     ? onNavigate('encontrar-orientacao')
-                    : onOpenMenu()
+                    : onSignIn()
                 }
               >
                 Consultar Bússola
               </button>
-              <button className="button" type="button" onClick={onOpenMenu}>
+              <button className="button" type="button" onClick={onSignIn}>
                 Entrar
               </button>
             </div>

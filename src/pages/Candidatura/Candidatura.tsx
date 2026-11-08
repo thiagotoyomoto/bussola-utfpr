@@ -1,18 +1,26 @@
-import { useState } from 'react'
+import { useState, type FormEvent } from 'react'
+import { useLocation } from 'react-router-dom'
 import './Candidatura.css'
+import type { NavigateToPage, NavigationState } from '../../types'
 
-function Candidatura({ onNavigate }) {
+function Candidatura({ onNavigate }: { onNavigate: NavigateToPage }) {
+  const location = useLocation()
+  const navigationState: NavigationState | null =
+    typeof location.state === 'object' && location.state !== null
+      ? location.state
+      : null
+  const selectedTopic = navigationState?.topicTitle ?? ''
   const [submissionStatus, setSubmissionStatus] = useState('Nenhuma candidatura foi enviada.')
 
-  const handleSubmit = (event) => {
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
     setSubmissionStatus(
-      'Formulário demonstrativo validado. Nenhum dado foi enviado.',
+      'Formulário validado. A integração de envio ainda não está configurada.',
     )
   }
 
   return (
-    <main className="student-application" id="inicio">
+    <main className="student-application" id="main-content" tabIndex={-1}>
       <nav className="application-breadcrumb" aria-label="Trilha de navegação">
         <button type="button" onClick={() => onNavigate('encontrar-orientacao')}>
           <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
@@ -48,7 +56,6 @@ function Candidatura({ onNavigate }) {
             </svg>
             Voltar ao perfil
           </button>
-          <span className="application-demo-badge">Dados demonstrativos</span>
         </div>
       </header>
 
@@ -103,6 +110,18 @@ function Candidatura({ onNavigate }) {
           <section className="application-section proposal-section" aria-labelledby="proposal-title">
             <h2 id="proposal-title">Sua proposta e interesses</h2>
             <div className="application-field">
+              <label htmlFor="proposal-topic">
+                Tema da proposta <span aria-hidden="true">*</span>
+              </label>
+              <input
+                id="proposal-topic"
+                name="tema-proposta"
+                type="text"
+                required
+                defaultValue={selectedTopic}
+              />
+            </div>
+            <div className="application-field">
               <label htmlFor="proposal-subject">
                 Título provisório da proposta <span aria-hidden="true">*</span>
               </label>
@@ -112,13 +131,13 @@ function Candidatura({ onNavigate }) {
               <label htmlFor="research-interests">
                 Proposta e interesses de pesquisa <span aria-hidden="true">*</span>
               </label>
-              <textarea id="research-interests" name="proposta" rows="3" required />
+              <textarea id="research-interests" name="proposta" rows={3} required />
             </div>
             <div className="application-field">
               <label htmlFor="orientation-motivation">
                 Motivação para a orientação <span aria-hidden="true">*</span>
               </label>
-              <textarea id="orientation-motivation" name="motivacao" rows="3" required />
+              <textarea id="orientation-motivation" name="motivacao" rows={3} required />
             </div>
           </section>
 
@@ -139,7 +158,7 @@ function Candidatura({ onNavigate }) {
               <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                 <path d="m22 2-7 20-4-9-9-4 20-7ZM22 2 11 13" />
               </svg>
-              Validar formulário demonstrativo
+              Validar formulário
             </button>
           </div>
         </form>
@@ -161,23 +180,10 @@ function Candidatura({ onNavigate }) {
 
             <div className="application-topic">
               <h3>Tema de TCC</h3>
-              <p>Análise de Discurso em Redes Sociais</p>
+              <p>{selectedTopic || 'Escolha um tema no perfil docente'}</p>
               <span>Área: Metodologia de Pesquisa</span>
             </div>
 
-            <div
-              className="application-summary__badges"
-              role="group"
-              aria-label="Indicadores da candidatura"
-            >
-              <span>92% de afinidade</span>
-              <span>3 vagas disponíveis</span>
-            </div>
-
-            <p className="application-affinity-note">
-              Afinidade demonstrativa por tema, área, palavras-chave e métodos. Não
-              indica probabilidade de aceitação.
-            </p>
           </section>
 
           <section className="application-warning" aria-labelledby="before-submit-title">

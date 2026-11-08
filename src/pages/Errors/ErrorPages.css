@@ -1,0 +1,70 @@
+.error-page {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-height: min(70vh, 42rem);
+  padding: 2rem 0;
+}
+
+.error-page:focus {
+  outline: none;
+}
+
+.error-card {
+  background: var(--bg-surface);
+  border: 0.0625rem solid var(--border);
+  border-radius: var(--radius);
+  max-width: 42rem;
+  padding: clamp(1.5rem, 5vw, 3rem);
+  text-align: center;
+  width: 100%;
+}
+
+.error-code {
+  color: var(--brand);
+  font-size: clamp(3rem, 12vw, 5rem);
+  font-weight: 800;
+  line-height: 1;
+  margin: 0 0 1rem;
+}
+
+.error-card h1 {
+  color: var(--brand-strong);
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
+  line-height: 1.2;
+  margin: 0;
+}
+
+.error-description {
+  color: var(--text-soft);
+  margin: 1rem 0 0;
+}
+
+.error-actions {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.error-button {
+  align-items: center;
+  background: var(--bg-surface);
+  border: 0.125rem solid var(--border);
+  border-radius: var(--radius);
+  color: var(--brand);
+  cursor: pointer;
+  display: inline-flex;
+  font: inherit;
+  font-weight: 700;
+  justify-content: center;
+  min-height: 2.75rem;
+  padding: 0.625rem 1rem;
+  text-decoration: none;
+}
+
+.error-button--primary {
+  background: var(--brand-accent);
+}

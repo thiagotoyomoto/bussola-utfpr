@@ -1,33 +1,38 @@
 .screen-nav__list {
-  display: grid;
+  align-items: center;
+  display: flex;
   gap: 0.375rem;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
   list-style: none;
   margin: 0;
   padding: 0;
+  overflow-x: auto;
+  scrollbar-width: thin;
 }
 
 .screen-nav__button {
+  align-items: center;
   background: var(--bg-surface);
   border: 0.0625rem solid var(--border);
   border-radius: var(--radius);
   color: var(--brand);
-  cursor: pointer;
+  display: inline-flex;
   font-weight: 700;
-  padding: 0.5rem 0.625rem;
-  text-align: left;
-  width: 100%;
-  transition: background-color 0.2s ease, border-color 0.2s ease,
-    color 0.2s ease;
+  justify-content: center;
+  min-height: 2.75rem;
+  padding: 0.5rem 0.75rem;
+  text-decoration: none;
+  white-space: nowrap;
 }
 
-.screen-nav__button:hover {
-  background: var(--bg-soft);
-  border-color: var(--brand);
-}
-
+.screen-nav__button:hover,
 .screen-nav__button[aria-current='page'] {
   background: var(--bg-soft);
   border-color: var(--brand);
   color: var(--brand);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .screen-nav__list {
+    scroll-behavior: auto;
+  }
 }

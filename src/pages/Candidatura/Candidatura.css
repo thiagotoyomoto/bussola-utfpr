@@ -78,15 +78,6 @@
   text-decoration: none;
 }
 
-.application-demo-badge {
-  background: #f1eaff;
-  border: 0.0625rem solid #321e4b;
-  border-radius: 999px;
-  font-size: 0.75rem;
-  font-weight: 700;
-  padding: 0.5rem 0.75rem;
-}
-
 .application-layout {
   display: grid;
   gap: 1.5rem;
@@ -203,8 +194,7 @@
 }
 
 .application-summary__heading,
-.application-faculty,
-.application-summary__badges {
+.application-faculty {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -242,26 +232,6 @@
 
 .application-topic h3 {
   margin: 0 0 0.5rem;
-}
-
-.application-summary__badges {
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  margin-top: 1rem;
-}
-
-.application-summary__badges span {
-  background: #f1eaff;
-  border: 0.0625rem solid #321e4b;
-  border-radius: 999px;
-  display: inline-block;
-  font-size: 0.75rem;
-  font-weight: 700;
-  padding: 0.375rem 0.625rem;
-}
-
-.application-affinity-note {
-  margin: 1rem 0 0;
 }
 
 button:focus-visible,

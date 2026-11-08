@@ -1,4 +1,5 @@
 .gestao-dashboard {
+  min-width: 0;
   width: 100%;
 }
 
@@ -6,6 +7,7 @@
   background: #fffdf0;
   border: 0.0625rem solid #321e4b;
   border-radius: var(--radius);
+  min-width: 0;
   padding: 1.25rem;
 }
 
@@ -162,14 +164,18 @@
 }
 
 .teacher-table-wrapper {
+  max-width: 100%;
+  min-width: 0;
   margin-top: 1.5rem;
   overflow-x: auto;
+  width: 100%;
 }
 
 .teacher-table {
   background: #fff;
   border-collapse: collapse;
   border: 0.0625rem solid #321e4b;
+  min-width: 42rem;
   width: 100%;
 }
 
@@ -265,5 +271,16 @@ a:focus-visible,
   .management-filters {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .management-heading__identity {
+    align-items: flex-start;
+    flex-direction: column;
+    min-width: 0;
+  }
+
+  .management-heading__identity > div {
+    min-width: 0;
+    width: 100%;
   }
 }
