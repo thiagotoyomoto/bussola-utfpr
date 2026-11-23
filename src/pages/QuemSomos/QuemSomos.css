@@ -8,7 +8,7 @@
 
 .about {
   background-color: var(--bg-surface);
-  border: 0.0625rem solid var(--border);
+  border: 0.0625rem solid var(--brand);
   border-radius: var(--radius);
   display: grid;
   gap: 1.75rem;
@@ -54,7 +54,7 @@
 
 .button {
   background-color: var(--bg-surface);
-  border: 0.0625rem solid var(--border);
+  border: 0.0625rem solid var(--brand);
   border-radius: var(--radius-pill);
   color: var(--text);
   cursor: pointer;

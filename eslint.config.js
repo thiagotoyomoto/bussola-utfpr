@@ -31,4 +31,12 @@ export default defineConfig([
       parserOptions: { ecmaFeatures: { jsx: true } },
     },
   },
+  {
+    // Arquivos gerados pelo shadcn exportam o componente e suas variantes
+    // (`buttonVariants`, ...) por convenção; fora do padrão do fast refresh.
+    files: ['src/components/ui/**/*.{ts,tsx}'],
+    rules: {
+      'react-refresh/only-export-components': 'off',
+    },
+  },
 ])

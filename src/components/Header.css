@@ -1,7 +1,7 @@
 .app-header {
   align-items: center;
   background: var(--bg-surface);
-  border: 0.0625rem solid var(--border);
+  border: 0.0625rem solid var(--brand);
   border-radius: var(--radius);
   display: grid;
   gap: 1rem;
@@ -43,7 +43,7 @@
 
 .google-login-button {
   background: var(--brand-accent);
-  border: 0.0625rem solid var(--border);
+  border: 0.0625rem solid var(--brand);
   border-radius: var(--radius-pill);
   color: var(--brand);
   cursor: pointer;
@@ -62,7 +62,7 @@
 
 .profile-selector select {
   background: var(--bg-surface);
-  border: 0.0625rem solid var(--border);
+  border: 0.0625rem solid var(--brand);
   border-radius: var(--radius);
   color: var(--brand);
   min-height: 2.75rem;

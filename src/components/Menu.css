@@ -12,7 +12,7 @@
 .screen-nav__button {
   align-items: center;
   background: var(--bg-surface);
-  border: 0.0625rem solid var(--border);
+  border: 0.0625rem solid var(--brand);
   border-radius: var(--radius);
   color: var(--brand);
   display: inline-flex;

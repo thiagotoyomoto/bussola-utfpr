@@ -12,7 +12,7 @@
 
 .error-card {
   background: var(--bg-surface);
-  border: 0.0625rem solid var(--border);
+  border: 0.0625rem solid var(--brand);
   border-radius: var(--radius);
   max-width: 42rem;
   padding: clamp(1.5rem, 5vw, 3rem);
@@ -52,7 +52,7 @@
 .error-button {
   align-items: center;
   background: var(--bg-surface);
-  border: 0.125rem solid var(--border);
+  border: 0.125rem solid var(--brand);
   border-radius: var(--radius);
   color: var(--brand);
   cursor: pointer;
