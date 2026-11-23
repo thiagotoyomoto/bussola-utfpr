@@ -174,7 +174,7 @@ function AppRoutes({
         path="/grafo"
         element={
           <ProtectedPage page="grafo" profile={profile} onSignIn={signIn}>
-            <GrafoConhecimento profile={profile} onNavigate={goTo} />
+            <GrafoConhecimento />
           </ProtectedPage>
         }
       />
